@@ -1,4 +1,4 @@
-<?php
+<?php defined('SYSPATH') or die('No direct script access.');
 return array(
     Rediska::DEFAULT_NAME => array (
         'name'         => Rediska::DEFAULT_NAME,
@@ -13,5 +13,3 @@ return array(
         'namespace'    => 'session::',
     )
 );
-
-?>
