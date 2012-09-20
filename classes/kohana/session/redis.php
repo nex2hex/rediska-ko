@@ -57,7 +57,6 @@ class Kohana_Session_Redis extends Session
             {
                 $this->_regenerate();
             }
-            Cookie::set($this->_cookie_name, $this->_id, $this->_lifetime);
         }
 
         return $this->_id;
@@ -76,6 +75,7 @@ class Kohana_Session_Redis extends Session
     protected function _regenerate()
     {
         $this->_id = uniqid();
+        Cookie::set($this->_cookie_name, $this->_id, $this->_lifetime);
         return $this->_id;
     }
 
